@@ -11,9 +11,16 @@ public class FindAllProductAndCommentApp {
 
 
         List<ProductWithCountOfCommentDto> productsWithCountOfComment = productCommentEntityService.findAllProductListWithCommentCount();
-        for (ProductWithCountOfCommentDto productWithCountOfCommentDto : productsWithCountOfComment) {
-            System.out.println(productWithCountOfCommentDto);
+        System.out.println("############################################################");
+        String formatted=String.format("%-5s %-20s %-15s %s","ID","Ürün Adı","Fiyat","Yorum Sayısı");
+
+        System.out.println(formatted);
+        for (ProductWithCountOfCommentDto productDto : productsWithCountOfComment) {
+            formatted=String.format("%-5s %-20s %-15s %s",productDto.getId(),productDto.getName(),productDto.getPrice(),productDto.getCountOfComment()==null?" ":productDto.getCountOfComment());
+            System.out.println(formatted);
+
         }
+        System.out.println("############################################################");
 
     }
 }

@@ -1,5 +1,9 @@
 # n11 TalentHub Java Bootcamp First Homework
+## Dump Data
 
+In Resources folders, there is **hw1_database_with_data.sql** file, it has Sql script with all dump data.
+
+If you want to add only Category or Comment or Product, you will have in Resource folders also.
 
 ## Functions
 
@@ -17,9 +21,9 @@
 
 ## Project Tree
 
-```
+```bash
 Project Tree
-│   <a href="github.com">homework.iml</a>
+│   homework.iml</a>
 │   pom.xml
 │
 ├───src
@@ -73,11 +77,14 @@ Project Tree
 │   │           hibernate.cfg.xml
 │   │           product_inserts.sql
 │   │           user_inserts.sql
+│   │           hw1_database_with_data.sql
 │   │
 │   └───test
 │       └───java
 └───target
 ```
+
+
 
 ## Resources
 
@@ -87,4 +94,6 @@ Project Tree
 - https://stackoverflow.com/questions/6319183/aggregate-function-in-sql-where-clause/6319246
 - https://stackoverflow.com/questions/6810691/instantiating-a-list-in-java
 - https://stackoverflow.com/questions/23212491/how-to-use-concat-ws-in-hibernate-hql
+- https://stackoverflow.com/questions/13789141/how-to-use-string-format-in-java-to-replicate-tab-t
+- https://stackoverflow.com/questions/6024108/export-a-create-script-for-a-database
 

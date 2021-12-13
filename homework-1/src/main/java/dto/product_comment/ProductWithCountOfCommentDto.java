@@ -27,7 +27,7 @@ public class ProductWithCountOfCommentDto {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", countOfComment=" + countOfComment +
+                ", countOfComment=" + getCountOfComment() +
                 '}';
     }
 
@@ -57,7 +57,7 @@ public class ProductWithCountOfCommentDto {
     }
 
     public Long getCountOfComment() {
-        return countOfComment;
+        return countOfComment==0?null:countOfComment;
     }
 
     public void setCountOfComment(Long countOfComment) {

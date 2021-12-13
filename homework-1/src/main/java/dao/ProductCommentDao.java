@@ -11,16 +11,19 @@ import java.util.List;
 
 public class ProductCommentDao extends BaseDao {
 
+    // It returns all comments' with ID's
     public List<ProductComment> findAll() {
         Query query = getCurrentSession().createQuery("select pc from ProductComment pc");
         return query.list();
     }
 
+
+    // It returns product's comment list which is given productId
     public List<UserAndProductCommentDetailsDto> findCommentListByProductId(Long productId) {
-        // returns product's comment list
+
         String sql = "select new " +
                 UserAndProductCommentDetailsDto.class.getName() +
-                " ( p.name,  c.name,  p.price,  u.firstName, u.lastName, u.email,  u.cellPhone, pc.comment,  pc.commentDate) " +
+                " (p.name,  c.name,  p.price,  u.firstName, u.lastName, u.email,  u.cellPhone, pc.comment,  pc.commentDate) " +
                 "from Product p  " +
                 "left join ProductComment pc ON p.id = pc.productId  " +
                 "left join User u ON pc.userId = u.id  " +
@@ -31,8 +34,9 @@ public class ProductCommentDao extends BaseDao {
         return query.list();
     }
 
+
+    // returns all products with count of comment
     public List<ProductWithCountOfCommentDto> findAllProductListWithCommentCount() {
-        // returns all products with count of comment
         String sql = "select new " +
                 ProductWithCountOfCommentDto.class.getName() +
                 " ( p.id, p.name, p.price, count(pc.id)) " +

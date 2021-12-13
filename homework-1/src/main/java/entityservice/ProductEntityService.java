@@ -13,7 +13,7 @@ public class ProductEntityService {
     }
 
     public List<Product> findAll() {
-        // returns all product list
+        // returns all products list
         return productDao.findAll();
     }
 }
