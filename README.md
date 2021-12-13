@@ -1,4 +1,6 @@
 # n11 TalentHub Java Bootcamp First Homework
+
+
 ## Functions
 
 * Listing reviews of products
@@ -7,13 +9,17 @@
 * List products
 * Listing user-based comments
 
-## Project Details
+## Used technologies
 
-*  Used Java, Hibernate and PostgreSQL
+*  Java
+*  Hibernate 
+*  PostgreSQL
+
+## Project Tree
 
 ```bash
 Project Tree
-│   homework.iml
+│   <a href="github.com">homework.iml</a>
 │   pom.xml
 │
 ├───src
