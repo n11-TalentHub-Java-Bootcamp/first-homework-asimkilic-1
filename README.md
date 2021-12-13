@@ -23,7 +23,7 @@ If you want to add only Category or Comment or Product, you will have in Resourc
 
 ```bash
 Project Tree
-│   homework.iml</a>
+│   homework.iml
 │   pom.xml
 │
 ├───src
